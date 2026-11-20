@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>越南印刷与24小时自助文印市场商业评估报告（2026年11月）</title>
+<meta name="description" content="针对越南商业文印生态及24小时无人值守自助打印模式的供需结构、本土竞品、单机单位经济（UE）、法规准入与落地路径的独立客观评估报告。">
+<style>
+  :root {
+    --bg: #f4f6f9;
+    --paper: #ffffff;
+    --ink: #1a2430;
+    --ink2: #465566;
+    --muted: #768494;
+    --line: #e2e7ee;
+    --line2: #eef2f6;
+    --navy: #163554;
+    --navy2: #26537c;
+    --accent: #d45d27;
+    --accent-soft: #fdf1eb;
+    --blue-soft: #edf4fb;
+    --green: #267352;
+    --green-soft: #eaf6f0;
+    --amber: #94630d;
+    --amber-soft: #fef6e4;
+    --red: #b03535;
+    --red-soft: #fceeee;
+    --purple: #5c3d99;
+    --purple-soft: #f3effb;
+    --shadow: 0 2px 10px rgba(22, 53, 84, 0.04);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--navy2); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* Layout */
+  .container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 28px 24px 80px;
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 980px) {
+    .container {
+      grid-template-columns: 1fr;
+      padding: 16px 14px 60px;
+      gap: 18px;
+    }
+    nav.toc {
+      position: static !important;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 8px;
+      padding: 12px 14px !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    nav.toc .toc-title, nav.toc .toc-foot { display: none; }
+    nav.toc a {
+      white-space: nowrap;
+      border-bottom: none !important;
+      background: var(--bg);
+      padding: 6px 12px !important;
+      border-radius: 999px;
+      font-size: 12.5px;
+      border: 1px solid var(--line);
+    }
+  }
+
+  /* Sidebar TOC */
+  nav.toc {
+    position: sticky;
+    top: 22px;
+    align-self: start;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 18px;
+    box-shadow: var(--shadow);
+    font-size: 13px;
+  }
+  nav.toc .toc-title {
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  nav.toc a {
+    display: block;
+    color: var(--ink2);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--line2);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  nav.toc a:last-of-type { border-bottom: none; }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc a .idx {
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    margin-right: 7px;
+    font-size: 11.5px;
+    font-weight: 600;
+  }
+  nav.toc .toc-foot {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .print-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--navy);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .print-btn:hover { background: var(--blue-soft); border-color: #c5d9ec; }
+
+  /* Cover Hero */
+  .hero {
+    background: linear-gradient(135deg, #132d48 0%, #214970 58%, #2f6490 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 42px 44px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(19, 45, 72, 0.16);
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -65px;
+    top: -65px;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.13);
+    box-shadow: 0 0 0 42px rgba(255,255,255,0.04), 0 0 0 84px rgba(255,255,255,0.025);
+    pointer-events: none;
+  }
+  .hero .kicker {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.12);
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .hero h1 {
+    font-size: 31px;
+    line-height: 1.32;
+    margin: 0 0 14px;
+    font-weight: 750;
+    letter-spacing: -0.01em;
+  }
+  .hero .subtitle {
+    font-size: 15px;
+    opacity: 0.92;
+    max-width: 760px;
+    margin: 0 0 26px;
+    line-height: 1.75;
+  }
+  .hero .meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+    font-size: 12.5px;
+    opacity: 0.88;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 16px;
+  }
+
+  /* Sections */
+  main { min-width: 0; }
+  section {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 34px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 28px 22px; }
+    .hero h1 { font-size: 23px; }
+    section { padding: 22px 18px; }
+  }
+  h2 {
+    font-size: 21px;
+    margin: 0 0 6px;
+    color: var(--navy);
+    font-weight: 750;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .sec-num {
+    color: var(--accent);
+    font-size: 13.5px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    background: var(--accent-soft);
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  .sec-lead {
+    color: var(--muted);
+    font-size: 13.5px;
+    margin: 0 0 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  h3 {
+    font-size: 16.5px;
+    margin: 26px 0 10px;
+    color: var(--navy2);
+    font-weight: 700;
+  }
+  h3:first-of-type { margin-top: 10px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+
+  /* Source Tags */
+  .badge {
+    display: inline-block;
+    font-size: 11.5px;
+    line-height: 1.45;
+    padding: 1px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .b-fact { background: var(--green-soft); color: var(--green); border: 1px solid #cbe6d8; }
+  .b-pub  { background: var(--blue-soft); color: var(--navy2); border: 1px solid #cfe0f0; }
+  .b-est  { background: var(--purple-soft); color: var(--purple); border: 1px solid #dfd3f5; }
+  .b-tbd  { background: var(--amber-soft); color: var(--amber); border: 1px solid #f0dfB4; }
+  .b-risk { background: var(--red-soft); color: var(--red); border: 1px solid #f0cece; }
+
+  /* Callout Boxes */
+  .callout {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .callout-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .c-info { background: var(--blue-soft); border-left: 4px solid var(--navy2); }
+  .c-warn { background: var(--amber-soft); border-left: 4px solid #d99b26; }
+  .c-risk { background: var(--red-soft); border-left: 4px solid var(--red); }
+  .c-good { background: var(--green-soft); border-left: 4px solid var(--green); }
+
+  /* KPI Grid */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .kpi-card {
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    padding: 16px 18px;
+    background: #fafbfd;
+  }
+  .kpi-card .k-label { font-size: 12.5px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .kpi-card .k-val { font-size: 21px; font-weight: 750; line-height: 1.3; font-variant-numeric: tabular-nums; color: var(--navy); }
+  .kpi-card .k-desc { font-size: 12.5px; color: var(--ink2); margin-top: 7px; line-height: 1.55; }
+  .kpi-card.ok { background: var(--green-soft); border-color: #cbe6d8; }
+  .kpi-card.ok .k-val { color: var(--green); }
+  .kpi-card.mid { background: var(--amber-soft); border-color: #f0dfb4; }
+  .kpi-card.mid .k-val { color: var(--amber); }
+  .kpi-card.no { background: var(--red-soft); border-color: #f0cece; }
+  .kpi-card.no .k-val { color: var(--red); }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin: 14px 0 20px; border-radius: 9px; border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.68; min-width: 620px; }
+  th {
+    background: #f1f5f9;
+    color: var(--navy);
+    text-align: left;
+    font-weight: 700;
+    padding: 11px 13px;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+  }
+  th:last-child, td:last-child { border-right: none; }
+  td {
+    padding: 10px 13px;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #fafbfd; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* Four Pillars Comparison */
+  .pillar-list { margin: 14px 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .pillar-row {
+    display: grid;
+    grid-template-columns: 195px 105px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line2);
+    font-size: 13.5px;
+  }
+  .pillar-row:last-child { border-bottom: none; }
+  .pillar-name { font-weight: 700; color: var(--navy); }
+  .status-pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-align: center;
+  }
+  .sp-ok { background: #d6ede1; color: var(--green); }
+  .sp-mid { background: #fae8be; color: var(--amber); }
+  .sp-no { background: #f7d6d6; color: var(--red); }
+  @media (max-width: 680px) {
+    .pillar-row { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  /* Interactive UE Simulator */
+  .sim-panel {
+    background: linear-gradient(180deg, #f8fafd 0%, #f1f5fa 100%);
+    border: 1px solid #d5e1ee;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 20px 0;
+  }
+  .sim-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .sim-presets { display: flex; flex-wrap: wrap; gap: 8px; }
+  .preset-btn {
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border-radius: 999px;
+    border: 1px solid #c6d6e6;
+    background: #fff;
+    color: var(--navy);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .preset-btn:hover, .preset-btn.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+  .sim-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  @media (max-width: 780px) { .sim-grid { grid-template-columns: 1fr; } }
+  .sim-controls { display: flex; flex-direction: column; gap: 13px; }
+  .ctrl-row { background: #fff; padding: 11px 14px; border-radius: 9px; border: 1px solid var(--line); }
+  .ctrl-top { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; font-weight: 600; color: var(--ink2); }
+  .ctrl-val { color: var(--navy); font-weight: 750; font-variant-numeric: tabular-nums; }
+  input[type="range"] { width: 100%; accent-color: var(--navy2); cursor: pointer; }
+  .sim-results {
+    background: #fff;
+    border: 1px solid #d5e1ee;
+    border-radius: 11px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .res-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 13.5px;
+  }
+  .res-item:last-of-type { border-bottom: none; }
+  .res-num { font-size: 16px; font-weight: 750; font-variant-numeric: tabular-nums; color: var(--navy); }
+  .res-highlight {
+    margin-top: 12px;
+    padding: 14px 16px;
+    border-radius: 9px;
+    text-align: center;
+  }
+  .res-highlight .rh-label { font-size: 12.5px; font-weight: 600; margin-bottom: 4px; }
+  .res-highlight .rh-val { font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .res-highlight .rh-sub { font-size: 12.5px; margin-top: 4px; }
+
+  /* Bar Chart */
+  .bar-group { margin: 16px 0; }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 165px 1fr 135px;
+    gap: 12px;
+    align-items: center;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .bar-label { color: var(--ink2); text-align: right; font-weight: 500; }
+  .bar-track { background: #e9eef4; border-radius: 6px; height: 22px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, #214970, #4d80ad); }
+  .bar-fill.accent { background: linear-gradient(90deg, #d45d27, #ea8a5c); }
+  .bar-fill.green { background: linear-gradient(90deg, #267352, #4da37d); }
+  .bar-val { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink); }
+  @media (max-width: 640px) {
+    .bar-row { grid-template-columns: 110px 1fr 105px; font-size: 12px; }
+  }
+
+  /* Interactive Field Checklist */
+  .check-list { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
+  .check-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 13px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fafbfd;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .check-item:hover { background: var(--blue-soft); }
+  .check-item input[type="checkbox"] {
+    margin-top: 4px;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--green);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .check-item.done { background: var(--green-soft); border-color: #cbe6d8; }
+  .check-item.done .ci-title { text-decoration: line-through; color: var(--green); }
+  .ci-title { font-weight: 700; color: var(--navy); font-size: 14px; margin-bottom: 3px; }
+  .ci-desc { font-size: 13px; color: var(--ink2); line-height: 1.65; }
+
+  /* Evidence Three Layers */
+  .layer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0; }
+  @media (max-width: 860px) { .layer-grid { grid-template-columns: 1fr; } }
+  .layer-card { border: 1px solid var(--line); border-radius: 11px; padding: 18px; font-size: 13.2px; }
+  .layer-card h4 { margin: 0 0 10px; font-size: 14.5px; display: flex; align-items: center; gap: 6px; }
+  .layer-card ul { padding-left: 18px; margin: 0; }
+  .layer-card li { margin: 6px 0; }
+
+  /* Sources */
+  .src-cols { columns: 2; column-gap: 30px; font-size: 12.5px; color: var(--ink2); }
+  @media (max-width: 700px) { .src-cols { columns: 1; } }
+  .src-cols div { break-inside: avoid; margin-bottom: 8px; line-height: 1.55; }
+
+  footer {
+    font-size: 12.5px;
+    color: var(--muted);
+    text-align: center;
+    padding: 18px 10px;
+    line-height: 1.7;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 10.5pt; }
+    .container { display: block; max-width: none; padding: 0; }
+    nav.toc, .sim-presets, .print-btn { display: none !important; }
+    section { break-inside: avoid; box-shadow: none; border: none; border-bottom: 1px solid #ddd; border-radius: 0; padding: 14px 0; }
+    .hero { box-shadow: none; break-after: avoid; }
+    table { min-width: 0; font-size: 9pt; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Sticky Sidebar Navigation -->
+  <nav class="toc" aria-label="报告目录">
+    <div class="toc-title">REPORT CONTENTS</div>
+    <a href="#s0"><span class="idx">00</span>核心结论与总览</a>
+    <a href="#s1"><span class="idx">01</span>越南文印市场基本盘</a>
+    <a href="#s2"><span class="idx">02</span>模式四支柱与本土竞品</a>
+    <a href="#s3"><span class="idx">03</span>单机UE模型与回本测算</a>
+    <a href="#s4"><span class="idx">04</span>市场容量与场景排序</a>
+    <a href="#s5"><span class="idx">05</span>法规准入与工程门槛</a>
+    <a href="#s6"><span class="idx">06</span>分阶段验证与实地清单</a>
+    <a href="#s7"><span class="idx">07</span>证据边界与参考来源</a>
+    <div class="toc-foot">
+      汇率基准：1 RMB ≈ 3,800 VND<br>
+      更新日期：2026 年 11 月
+      <button class="print-btn" onclick="window.print()">导出 / 打印 PDF</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Cover Hero -->
+    <header class="hero">
+      <div class="kicker">VIETNAM PRINTING &amp; SMART KIOSK MARKET ASSESSMENT</div>
+      <h1>越南印刷与 24 小时自助文印市场<br>商业可行性及落地路径评估报告</h1>
+      <p class="subtitle">
+        围绕越南商业文印供需生态、街头复印店价格带、本土自助打印竞品、中韩台单机基准率、法规外资准入及单位经济模型（UE）展开证伪式交叉评估，明确可存活的细分场景与最小闭环验证（MVP）标准。
+      </p>
+      <div class="meta-bar">
+        <span><strong>评估范围</strong>：越南（重点聚焦胡志明市、河内）</span>
+        <span><strong>研究基准期</strong>：2026 年 11 月</span>
+        <span><strong>折算汇率</strong>：1 CNY ≈ 3,800 VND（1 USD ≈ 25,550 VND）</span>
+        <span><strong>研究性质</strong>：独立桌面研究与财务建模（实地投放前评估）</span>
+      </div>
+    </header>
+
+    <!-- 00 Executive Summary -->
+    <section id="s0">
+      <h2><span class="sec-num">00</span>执行摘要：核心判断与关键指标</h2>
+      <p class="sec-lead">先拆解供需结构与单点现金流约束，区分“真实需求”与“可盈利商业模式”。</p>
+
+      <div class="callout c-info">
+        <div class="callout-title">总评估结论：局部室内场景有条件可行，原样照搬户外社区模式大概率亏损</div>
+        越南存在真实的校外与社区零散打印需求（家庭打印机渗透率约 <strong>11.7%</strong>、大中小学在校生超 <strong>2,000 万人</strong>、<code>VietQR</code> 扫码支付高度普及），但支撑国内社区自助打印跑通的底层前提在越南发生了结构性变化：<strong>约 70%–80% 城市居民居住于临街排屋，街头复印店密集且黑白散印低至 350–1,000 盾/页（约 0.09–0.26 元），叠加政府免费 24/7 政务自助站与 VNeID 电子证照免交复印件新规</strong>。因此，该项目在越南<strong>不属于可烧钱广撒网的平台型暴利赛道，而是一门对选址门禁、场租形式与机器成本极度敏感的区域精益运营生意</strong>。建议严格遵循“实地取证先行、定制研发后置”，以 6–10 台现成室内机开展单城验证，暂缓重资产开模或大规模进口户外柜。
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card ok">
+          <div class="k-label">支付与年轻客群底座</div>
+          <div class="k-val">成立 · 成熟</div>
+          <div class="k-desc">2025 年越南 QR 扫码支付额 +124.1%，<code>VietQR</code> 互通银行与钱包；在校学生基数超 2,000 万。</div>
+        </div>
+        <div class="kpi-card mid">
+          <div class="k-label">单机盈亏与两年回本门槛</div>
+          <div class="k-val">15 单 / 27 单·日</div>
+          <div class="k-desc">3,000 万盾室内机日均 <strong>15 单</strong>仅保日常开支，<strong>27 单</strong>方达两年静态回本（高于中韩成熟店均 8–13 单）。</div>
+        </div>
+        <div class="kpi-card mid">
+          <div class="k-label">3–5 年现实可运营空间 (SOM)</div>
+          <div class="k-val">1,000–4,000 台</div>
+          <div class="k-desc">千台成熟机年终端流水约 <strong>1,230 万–1,850 万元 RMB</strong>，点位层现金贡献约 190 万–520 万元/年。</div>
+        </div>
+        <div class="kpi-card no">
+          <div class="k-label">外资准入与法规合规</div>
+          <div class="k-val">硬性前置门槛</div>
+          <div class="k-desc">印刷属外资有条件准入（96/2026 法令），复印点开业前申报、彩印机登记及 2026 个保法均需本地合规落地。</div>
+        </div>
+      </div>
+
+      <h3>对不同参与主体的商业空间客观定位</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:24%">参与视角</th>
+              <th style="width:16%">商业吸引力</th>
+              <th>客观评估依据</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>越南本地文印/设施团队的增量业务</strong></td>
+              <td><span class="badge b-fact">具备可行性</span></td>
+              <td>复用既有巡检人员、维修备件与本地牌照主体，聚焦胡志明市与河内两城的 24h 便利店、高校宿舍与大型公寓门禁内点位，百台至千台规模可贡献稳健正向现金流。</td>
+            </tr>
+            <tr>
+              <td><strong>从零自建跨国重资产直营网络</strong></td>
+              <td><span class="badge b-tbd">边际偏薄 · 慎行</span></td>
+              <td>即使做到全越南稳态上限（约 5,000–12,000 台），全行业年总流水天花板仅约 <strong>0.3 亿–1.5 亿元 RMB</strong>；跨国搭建独立研发、法务、清关与多城运维总部的固定开销极易吞噬点位利润。</td>
+            </tr>
+            <tr>
+              <td><strong>VC 风险投资 / 平台独角兽叙事</strong></td>
+              <td><span class="badge b-risk">空间不足</span></td>
+              <td>低客单、重运维、无双边网络效应，且面临街头低价店与电子政务双向挤压；结合越南较高股权风险溢价（Damodaran 测算约 <code>7.79%</code>，本地存款利率 <code>7%–8%</code>），不适合高估值烧钱扩张模式。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 01 Vietnam Macro & Printing Market -->
+    <section id="s1">
+      <h2><span class="sec-num">01</span>越南印刷与文印市场基本盘：利好与折损并存</h2>
+      <p class="sec-lead">全面盘点上游打印设备大盘、人口渠道结构，以及三项容易被国内经验高估的需求折损因子。</p>
+
+      <h3>1.1 宏观经济、设备大盘与渠道基数</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>核心维度</th>
+              <th>统计 / 调研数据</th>
+              <th>对自助文印项目的商业含义</th>
+              <th>信源等级</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>总人口与城镇化率</strong></td>
+              <td>总人口约 <strong>1.016 亿–1.023 亿</strong>；城镇人口约 <strong>3,940 万–3,955 万</strong>（城镇化率 <strong>38.8%</strong>）</td>
+              <td>城镇化率显著低于中国（约 67.9%）；70% 以上城市人口住临街管屋（<code>Nhà ống</code>），全国封闭公寓项目约 <strong>4,400 个</strong>（胡志明约 1,400、河内约 1,000）。</td>
+              <td><span class="badge b-fact">官方统计</span></td>
+            </tr>
+            <tr>
+              <td><strong>收入水平与运维人工</strong></td>
+              <td>2025 人均 GDP <strong>5,026 美元</strong>（GDP +8.02%）；2026 一类地区最低月薪 531 万盾，摩托巡检员月薪约 <strong>900 万–1,100 万盾</strong>（约 2,370–2,900 元）</td>
+              <td>一方面降低了同城密集布点后的巡检补纸人工成本；另一方面也意味着<strong>街头夫妻复印店人工极便宜、营业时间灵活</strong>。</td>
+              <td><span class="badge b-fact">官方统计</span></td>
+            </tr>
+            <tr>
+              <td><strong>打印机整机市场规模</strong></td>
+              <td>2025 年越南打印机市场约 <strong>2.706 亿美元</strong>（约 18 亿元 RMB），CAGR 4.90%；<strong>85%–95% 设备依赖进口</strong></td>
+              <td>校准了终端文印服务规模上限；整机与耗材受越南盾汇率波动传导明显，墨仓式喷墨是少数正增长品类。</td>
+              <td><span class="badge b-pub">行业研报</span></td>
+            </tr>
+            <tr>
+              <td><strong>在校生规模与家庭保有率</strong></td>
+              <td>K12 在校生约 <strong>1,835 万</strong>；高校 <strong>226–243 所</strong>（大学生约 207 万–260 万）；家庭打印机渗透率约 <strong>11.7%</strong></td>
+              <td>年轻人口与学生密度高，家用激光机（如 Canon LBP2900 售价约 370 万–420 万盾）较贵且缺手机直连，校外打印需求真实存在。</td>
+              <td><span class="badge b-fact">官方/UNESCO</span></td>
+            </tr>
+            <tr>
+              <td><strong>现代连锁便利店网络</strong></td>
+              <td>2026 年现代便利店/迷你超市共 <strong>9,671 家</strong>（WinMart+ 4,592、BHX 2,759、Circle K 500+、GS25 445）</td>
+              <td>区别于约 25 万家传统夫妻杂货店（<code>tạp hóa</code>），现代 24h 连锁便利店有空调、稳定市电、监控与总部谈判窗口，是<strong>最佳室内寄生渠道</strong>。</td>
+              <td><span class="badge b-pub">零售普查</span></td>
+            </tr>
+            <tr>
+              <td><strong>无现金扫码支付底座</strong></td>
+              <td>2025 年 QR 支付金额 <strong>+124.1%</strong>；<code>VietQR</code> 覆盖全民银行 App，Zalo 约 7,000 万 MAU、MoMo 约 3,100 万用户</td>
+              <td>无需加装易卡钞的纸币/硬币模块，动态二维码 1–3 秒回调即可触发打印。</td>
+              <td><span class="badge b-fact">越南央行 SBV</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>1.2 必须正视的三项“需求折损因子”（防线性外推误区）</h3>
+      <div class="callout c-warn">
+        <div class="callout-title">为什么不能把国内“社区机 80% 印作业 + 印政务证件”的模型直接套用到越南？</div>
+        <ol style="margin-bottom:0">
+          <li><strong>小学阶段“晚间家庭作业”引擎受政策约束</strong>：越南公立学校推进每日两班制，胡志明市、清化省等地教育培训厅明确要求两班制小学<strong>不布置课后家庭作业</strong>，且越南教育培训部《第 29/2024 号通知》严令禁止小学文化课校外补习。初高中与大学仍有讲义/试卷打印需求，但小学段高频打卷刚需弱于国内，须在实地按学段核验订单构成。</li>
+          <li><strong><code>VNeID</code> 电子证照立法减免纸质复印件</strong>：越南政府<strong>《第 320/2026/NĐ-CP 号法令》自 2026 年 9 月 28 日起正式生效</strong>，规定已集成至国家电子身份应用 <code>VNeID</code> 的 206 类证件，在办理行政手续、公共服务及民事交易时<strong>不得再要求公民提交原件或纸质复印件</strong>；地方政务在线提交率已达 91.74%。</li>
+          <li><strong>政府 24/7 免费政务自助站直接分流</strong>：胡志明市东盛乡已于 2026 年 7 月投运 24/7 公共行政自助服务站（配备触摸屏、扫描仪、A4 打印机，提供免费打印复印支持），且胡志明市规划建设至少 <strong>168 个数字公民服务站</strong>。这意味着政务办事复印场景正被公共免费设施承接，反过来也提示可关注政务终端硬件/系统集成（B2G）采购机会。</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 02 Four Pillars & Local Competitors -->
+    <section id="s2">
+      <h2><span class="sec-num">02</span>商业模式四支柱检验与越南本土竞争格局</h2>
+      <p class="sec-lead">拆解国内社区自助打印成立的四大支柱，并盘点越南已在运营的直接竞品与替代渠道。</p>
+
+      <h3>2.1 国内成熟模式四支柱在越南的适配度检验</h3>
+      <div class="pillar-list">
+        <div class="pillar-row">
+          <div class="pillar-name">① 超级 App 零摩擦入口</div>
+          <div><span class="status-pill sp-no">不直接成立</span></div>
+          <div>国内依托微信小程序实现“群文件直调 + 免安装上传 + 支付” 30 秒闭环；越南无单一四合一入口，<code>Zalo Mini App</code> 读取个人聊天附件链路较长，需重构为<strong>“手机越南语 H5 网页 / Zalo OA 公众号转发收件生成取件码 + 动态 VietQR 支付”</strong>，初期用户教育成本更高。</div>
+        </div>
+        <div class="pillar-row">
+          <div class="pillar-name">② 封闭物业批量铺点</div>
+          <div><span class="status-pill sp-mid">局部成立</span></div>
+          <div>越南大型封闭高层公寓（如 Vinhomes 旗下大盘）主要集中在胡志明市与河内，且常涉及物业管理处（<code>Ban quản lý</code>）与业委会（<code>Ban quản trị</code>）双重审批，自动售货机位习惯收固定月租（150 万–350 万盾/月）。可批量签约的主力通道转向<strong>现代连锁便利店总部与高校后勤</strong>。</div>
+        </div>
+        <div class="pillar-row">
+          <div class="pillar-name">③ 24 小时与距离溢价</div>
+          <div><span class="status-pill sp-mid">仅夜间/门禁内</span></div>
+          <div>白天临街区域遍布低价复印店，且人工协助排版对不熟悉打印设置的用户更友好；<strong>真正的差异化窗口仅存在于晚 19:00–24:00 街店关门后、周日歇业时段，以及下楼出园区骑车距离较远的超高层公寓/宿舍门禁内</strong>。</div>
+        </div>
+        <div class="pillar-row">
+          <div class="pillar-name">④ 高毛利增值业务摊薄</div>
+          <div><span class="status-pill sp-mid">部分可迁移</span></div>
+          <div>国内题库试卷受限于版权与语种完全无法直接迁移；韩式自助拍照亭（Photobooth）在越南已有 498+ 门店 / 131 个品牌抢占高客单娱乐拍照市场；可行的增值项为<strong>标准行政证件照（3×4 / 4×6）、生活照快印及机身数字屏周边商户广告</strong>。</div>
+        </div>
+      </div>
+
+      <h3>2.2 越南现有打印渠道与本土自助终端竞品实况</h3>
+      <p>越南并非无人涉足的“绝对空白市场”，本土初创团队、传统街店与高校补贴体系均已形成明确价格锚点：</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:19%">竞争/替代渠道</th>
+              <th style="width:36%">已核实的业务形态与公开挂牌价</th>
+              <th>对新进入者的启示与约束</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>InsPrint</strong><br><span class="badge b-pub">本土直接竞品</span></td>
+              <td>支持手机传文件、银行扫码付款、输码取件。公开计费公式：A4 纸 <code>250–300 盾/张</code> + 黑墨按每 5% 覆盖计费 + 10% 服务费（<strong>每单最低服务费 3,500 盾</strong>）+ VAT。实算 1 页约 <code>4,290 盾</code>，5 页黑白约 <code>6,250–6,875 盾</code>，10 页约 <code>10,560 盾</code>。</td>
+              <td>本土同行已用“最低服务费”拉高小单客单价以覆盖固定成本，且点位地图显示部分高校点位存在停用更替，<strong>实地考察必查其真实在营存活率与日单量</strong>。</td>
+            </tr>
+            <tr>
+              <td><strong>RoPrint (NaviX) &amp; BANGAMING</strong><br><span class="badge b-pub">设备与场地竞品</span></td>
+              <td>RoPrint 推出手机上传 + 扫码支付 A4 终端，面向咖啡店、便利店、宿舍招募场地与代理，官网明示<strong>不承诺固定收益</strong>；BANGAMING 销售支持 MoMo/VNPAY/ZaloPay 的自助打印复印一体机。</td>
+              <td>场地方已有本土替代方案可询价对比；在未证明更低整机成本或更高运营稳定性前，单纯卖硬件或收高额品牌加盟费缺乏竞争力。</td>
+            </tr>
+            <tr>
+              <td><strong>街头复印店 (Tiệm photocopy)</strong><br><span class="badge b-fact">最大存量替代</span></td>
+              <td>胡志明市门店（如 TrueLight、In Nhanh HCM）A4 单面黑白散印 <strong>350–900 盾/页</strong>（大宗讲义低至 <strong>150–250 盾/页</strong>），彩色 <strong>800–2,200 盾/页</strong>；支持 Zalo 发文件、代排版与装订，部分高校旁街店周日或晚 18:30 后关门。</td>
+              <td>白纸批发价约 120–150 盾/张，自助机白天绝无可能与街店打价格战；<strong>只能放弃大单印书，专注 1–5 页的夜间/门禁内应急便利小单</strong>。</td>
+            </tr>
+            <tr>
+              <td><strong>高校校内补贴与企业文印租赁</strong><br><span class="badge b-fact">校园/B端供给</span></td>
+              <td>胡志明市经济大学（UEH）每生每年<strong>免费 500 个单面</strong>，续购 100 面仅 <code>25,000 盾</code>（250 盾/面）并已布入宿舍；越德大学黑白 <code>500 盾/面</code>；高校与银行办公机租赁已有 Nhất Vinh、Go Print 等成熟服务商。</td>
+              <td>进入高校前必须逐栋排查是否已有校方免费额度覆盖；机构办公文印租赁（MPS）在当地属成熟红海，需靠价格与驻场响应竞争。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.3 东亚成熟参考系校准：单台机器一天到底能有多少单？</h3>
+      <div class="bar-group">
+        <div class="bar-row">
+          <div class="bar-label">国内头部社区网络均值</div>
+          <div class="bar-track"><div class="bar-fill" style="width:28%"></div></div>
+          <div class="bar-val">约 6 – 12 单/日</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">韩国 CU 便利店 (800店)</div>
+          <div class="bar-track"><div class="bar-fill" style="width:43%"></div></div>
+          <div class="bar-val">约 13 单/日</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">越南单机日常现金保本线</div>
+          <div class="bar-track"><div class="bar-fill accent" style="width:50%"></div></div>
+          <div class="bar-val">15 单/日</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">越南单机 24 个月回本线</div>
+          <div class="bar-track"><div class="bar-fill green" style="width:90%"></div></div>
+          <div class="bar-val">27 单/日</div>
+        </div>
+      </div>
+      <p style="font-size:12.8px;color:var(--muted);">
+        注：韩国 CU 便利店 <code>Printing Box</code> 公开披露店均月使用约 400 次（折合 13.3 次/日，70% 以上为 10–20 余岁年轻客群）；中国台湾 7-ELEVEN <code>ibon</code> 覆盖 6,800+ 门店，系集成票务/缴费/打印的多功能店内终端。中韩两个成熟市场店均单量均未超过 15 单/日，提示在越南设定“日均 25–30 单”假设必须极为审慎，仅高密度核心点位有望达成。
+      </p>
+    </section>
+
+    <!-- 03 Unit Economics & Interactive Simulator -->
+    <section id="s3">
+      <h2><span class="sec-num">03</span>单机单位经济模型（UE）与交互式回本敏感性测算</h2>
+      <p class="sec-lead">基于越南本地纸墨物价与巡检成本建立透明可复算模型，并提供实时参数压力测试。</p>
+
+      <h3>3.1 标准室内机基准参数拆解（未税口径，1 RMB ≈ 3,800 VND）</h3>
+      <ul>
+        <li><strong>代表性订单结构（6,500 盾/单 ≈ 1.71 元）</strong>：假设每笔成功付费单平均 5 面 A4（4 面黑白 @ 1,000 盾 + 1 面彩色 @ 2,500 盾，主动测试应急便利溢价）。</li>
+        <li><strong>单笔变动成本与分成</strong>：纸墨耗材约 <code>1,800 盾</code>（黑白 250 盾/面、彩色 800 盾/面，当地 Double A 纸批发约 150 盾/张）+ 场地流水分成 <code>15%</code>（975 盾）+ 扫码支付通道费 <code>1%</code>（65 盾）+ 卡纸重印异常损耗 <code>160 盾</code> → <strong>每单净边际贡献 = 3,500 盾（约 0.92 元）</strong>，与本土竞品 InsPrint 设定的 3,500 盾最低服务费水平高度吻合。</li>
+        <li><strong>单机月固定现金开支（150 万盾/月 ≈ 395 元）</strong>：含市电与 4G 网络系统分摊 35 万盾、同城路线补纸巡检人工分摊 75 万盾、日常维修备件 40 万盾（基准假设无额外固定场租）。</li>
+        <li><strong>单机落地一次性投入（CAPEX = 3,000 万盾 ≈ 7,895 元）</strong>：按室内或便利店有遮蔽场景的整机含安装预算计（若改用高防护进口户外大柜，落地成本将升至 6,000 万–8,000 万盾）。</li>
+      </ul>
+
+      <!-- Interactive Calculator -->
+      <div class="sim-panel">
+        <div class="sim-header">
+          <div>
+            <strong style="font-size:15.5px;color:var(--navy);">交互式单机回本压力测试器</strong>
+            <div style="font-size:12.5px;color:var(--muted);">拖动滑块或点击预设情景，直观检验单量、客单价、固定场租与机柜成本对回本周期的影响</div>
+          </div>
+          <div class="sim-presets">
+            <button type="button" class="preset-btn" onclick="applyPreset(this, 10, 6500, 15, 0, 30)">中韩均值参照(10单)</button>
+            <button type="button" class="preset-btn" onclick="applyPreset(this, 15, 6500, 15, 0, 30)">现金保本线(15单)</button>
+            <button type="button" class="preset-btn active" onclick="applyPreset(this, 27, 6500, 15, 0, 30)">两年回本基准(27单)</button>
+            <button type="button" class="preset-btn" onclick="applyPreset(this, 27, 5300, 15, 0, 30)">降价挤压(客单5300盾)</button>
+            <button type="button" class="preset-btn" onclick="applyPreset(this, 27, 6500, 15, 100, 30)">加收100万盾固定租</button>
+            <button type="button" class="preset-btn" onclick="applyPreset(this, 27, 6500, 15, 0, 75.6)">进口户外重柜(7560万盾)</button>
+          </div>
+        </div>
+
+        <div class="sim-grid">
+          <div class="sim-controls">
+            <div class="ctrl-row">
+              <div class="ctrl-top"><span>日均成功付费订单数（含淡季与停机日均值）</span><span class="ctrl-val" id="v-orders">27 单/日</span></div>
+              <input type="range" id="r-orders" min="5" max="50" step="1" value="27" oninput="updateSim()">
+            </div>
+            <div class="ctrl-row">
+              <div class="ctrl-top"><span>平均每单未税收入（客单价）</span><span class="ctrl-val" id="v-arpu">6,500 盾 (≈1.71元)</span></div>
+              <input type="range" id="r-arpu" min="3500" max="16000" step="100" value="6500" oninput="updateSim()">
+            </div>
+            <div class="ctrl-row">
+              <div class="ctrl-top"><span>场地方流水分成比例</span><span class="ctrl-val" id="v-share">15%</span></div>
+              <input type="range" id="r-share" min="0" max="35" step="1" value="15" oninput="updateSim()">
+            </div>
+            <div class="ctrl-row">
+              <div class="ctrl-top"><span>场地额外固定保底月租（公寓/医院常见 100–500万盾）</span><span class="ctrl-val" id="v-rent">0 万盾/月</span></div>
+              <input type="range" id="r-rent" min="0" max="350" step="25" value="0" oninput="updateSim()">
+            </div>
+            <div class="ctrl-row">
+              <div class="ctrl-top"><span>单机含安装落地总成本 (CAPEX)</span><span class="ctrl-val" id="v-capex">3,000 万盾 (≈7,895元)</span></div>
+              <input type="range" id="r-capex" min="20" max="85" step="0.6" value="30" oninput="updateSim()">
+            </div>
+          </div>
+
+          <div class="sim-results">
+            <div>
+              <div class="res-item">
+                <span>单机月未税交易流水 (GMV)</span>
+                <span class="res-num" id="out-gmv">526.5 万盾 (≈1,386元)</span>
+              </div>
+              <div class="res-item">
+                <span>每单扣除耗材/分成/通道后贡献</span>
+                <span class="res-num" id="out-unit">3,500 盾/单</span>
+              </div>
+              <div class="res-item">
+                <span>月固定开支（电网+巡检+备件+固定租）</span>
+                <span class="res-num" id="out-fixed">150.0 万盾/月</span>
+              </div>
+              <div class="res-item">
+                <span>单机月点位经营净现金流</span>
+                <span class="res-num" id="out-cash">+133.5 万盾 (≈+351元)</span>
+              </div>
+              <div class="res-item">
+                <span>达 24 个月回本所需最低日单量</span>
+                <span class="res-num" id="out-req">27 单/日</span>
+              </div>
+            </div>
+
+            <div class="res-highlight" id="out-box" style="background:var(--green-soft);color:var(--green);">
+              <div class="rh-label">静态设备回收周期（未扣总部管理与税费）</div>
+              <div class="rh-val" id="out-payback">22.5 个月</div>
+              <div class="rh-sub" id="out-verdict">跨过 24 个月投资回收线（需实地验证能否稳定维持该单量）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>3.2 关键脆弱性提示：三项常见变量足以推翻单点盈利</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>压力测试情景</th>
+              <th>参数变动</th>
+              <th class="num">月经营现金贡献 (27单时)</th>
+              <th class="num">24个月回本所需日单量</th>
+              <th>实战避坑铁律</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>基准模型（室内简配机+纯分成）</strong></td>
+              <td>客单 6,500 盾，15% 分成，0 固定租，机价 3,000 万盾</td>
+              <td class="num">+133.5 万盾</td>
+              <td class="num"><strong>27 单/日</strong></td>
+              <td>作为选点基准标尺</td>
+            </tr>
+            <tr>
+              <td><strong>价格受街店挤压下调</strong></td>
+              <td>黑白仅能卖 700 盾/面，客单降至 5,300 盾</td>
+              <td class="num">+51.9 万盾</td>
+              <td class="num"><strong>37 单/日</strong></td>
+              <td>紧邻低价复印店 100 米内的点位坚决不进</td>
+            </tr>
+            <tr>
+              <td><strong>场地方加收固定保底场租</strong></td>
+              <td>15% 分成外另收 100 万盾/月（医院售货机招租起拍达 536 万盾/月）</td>
+              <td class="num">+33.5 万盾</td>
+              <td class="num"><strong>36 – 61 单/日</strong></td>
+              <td><strong>未验证点位严禁签高额固定月租</strong>，坚持流水分成</td>
+            </tr>
+            <tr>
+              <td><strong>重型进口户外柜高 CAPEX</strong></td>
+              <td>含关税、海运、防雨除湿户外柜落地达 7,560 万盾</td>
+              <td class="num">+133.5 万盾</td>
+              <td class="num"><strong>45 单/日</strong></td>
+              <td>放弃昂贵露天柜，改走室内简配机型控成本</td>
+            </tr>
+            <tr>
+              <td><strong>高校长达 3 个月寒暑假折损</strong></td>
+              <td>9 个月旺季 30 单/日 + 3 个月假期 10 单/日（年均 25 单）</td>
+              <td class="num">+112.5 万盾</td>
+              <td class="num">回收期延至 <strong>26.7 个月</strong></td>
+              <td>校园点位测算必须按全年 360 天含假期均值折算</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout c-warn">
+        <div class="callout-title">纯住宅小区点位的“频次反算检验”</div>
+        若某封闭公寓大堂门禁实际仅覆盖 <strong>1,000 户家庭</strong>，要达到两年回本所需的 <code>27 单/日</code>（全年 9,720 笔付费单）：即便高达 <strong>20% 的住户家庭</strong>成为活跃付费用户（200 户），<strong>每户付费家庭仍需平均每月下楼打印 4.05 次</strong>。若实地访谈发现多数家庭每学期仅应急打印数次，则纯靠住户零售无法达标，必须叠加周边学生客流、一柜多能（证件照/屏幕广告）或由物业公司按月采购便民服务保底差额（如 20 单/日时物业月补约 65 万盾）。
+      </div>
+    </section>
+
+    <!-- 04 Market Capacity & Scenario Priority -->
+    <section id="s4">
+      <h2><span class="sec-num">04</span>市场容量天花板测算（TAM / SAM / SOM）与场景优先级</h2>
+      <p class="sec-lead">自下而上核算有效可盈利点位池，拒绝用“1 亿总人口”做脱离物理载体的宏大叙事。</p>
+
+      <h3>4.1 不同终端规模下的营收与现金贡献量级</h3>
+      <p>假定全部为连续在营且达到成熟效率（按日均 20–30 单、平均未税 6,500 盾/单测算）的有效设备：</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>网络规模档位</th>
+              <th class="num">所需年度成功订单</th>
+              <th class="num">年终端未税交易额 (GMV)</th>
+              <th class="num">点位层年经营现金贡献</th>
+              <th class="num">初始硬件总投入</th>
+              <th>规模经济与总部覆盖评估</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>10 台（同城单线测试）</strong></td>
+              <td class="num">9.7 万–10.8 万单</td>
+              <td class="num">约 16.6 万–18.5 万元</td>
+              <td class="num">约 4.2 万–5.2 万元</td>
+              <td class="num">约 7.9 万元</td>
+              <td>仅用于验证真实单量、卡纸率与越文软件闭环。</td>
+            </tr>
+            <tr>
+              <td><strong>100 台（单城网格成型）</strong></td>
+              <td class="num">72 万–108 万单</td>
+              <td class="num"><strong>约 123 万–185 万元</strong></td>
+              <td class="num"><strong>约 19 万–52 万元</strong></td>
+              <td class="num">约 79 万元</td>
+              <td>可跑通 1–2 名专职巡检员高密度网格；但若只收 16% 平台托管费（年入约 29.6 万），尚不足养活独立跨国团队。</td>
+            </tr>
+            <tr>
+              <td><strong>1,000 台（双城头部规模）</strong></td>
+              <td class="num">720 万–1,080 万单</td>
+              <td class="num"><strong>约 1,230 万–1,847 万元</strong></td>
+              <td class="num"><strong>约 190 万–521 万元</strong></td>
+              <td class="num">约 790 万元</td>
+              <td>扣除双城拓点、研发维护、税费及 3–4 年整机更新后，属稳健的中小规模现金流企业。</td>
+            </tr>
+            <tr>
+              <td><strong>全行业有效容量上限 (SAM)</strong><br><span class="badge b-est">3,100–5,600 台</span></td>
+              <td class="num">约 2,500 万–5,000 万单</td>
+              <td class="num"><strong>约 0.45 亿–1.45 亿元</strong></td>
+              <td class="num">—</td>
+              <td class="num">—</td>
+              <td>综合连锁便利店（剔除街店重叠）、240 所高校校区、两大都市封闭大盘及政务点自下而上汇总上限。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4.2 越南落地场景优先级排序（由优至劣）</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:8%">排序</th>
+              <th style="width:25%">目标场景</th>
+              <th style="width:15%">推荐评级</th>
+              <th>核心商业逻辑与准入前提</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>P1</strong></td>
+              <td><strong>24h 现代连锁便利店店内</strong><br>（GS25、Circle K、FamilyMart 等）</td>
+              <td><span class="badge b-fact">最优先验证</span></td>
+              <td>对标中国台湾 7-ELEVEN <code>ibon</code> 与韩国 CU 形态：自带全天候空调（天然解决潮湿卡纸）、稳定电力、安防监控与夜间营业客流，店员可顺手协助补纸，且可通过便利店总部批量谈判进场。</td>
+            </tr>
+            <tr>
+              <td><strong>P2</strong></td>
+              <td><strong>大型封闭高层公寓门禁内大堂</strong><br>（如 Vinhomes Grand Park / Smart City）</td>
+              <td><span class="badge b-pub">有条件推荐</span></td>
+              <td>单盘居住数万人，高层住户夜间出园区骑车找店痛点显著；<strong>硬前提是不签高额固定场租（采用流水分成或物业按月补贴便民服务费）</strong>，并优先进驻入住率高、年轻家庭集中的楼栋组团。</td>
+            </tr>
+            <tr>
+              <td><strong>P3</strong></td>
+              <td><strong>高校宿舍区门禁内与自习空间</strong><br>（如胡志明市守德大学城等）</td>
+              <td><span class="badge b-pub">有条件推荐</span></td>
+              <td>年轻学生对扫码传文件零学习门槛、夜间赶论文/讲义需求集中；签约前须逐栋核实<strong>校方是否有免费印量机器（如 UEH 宿舍）及寒暑假封楼时长</strong>。</td>
+            </tr>
+            <tr>
+              <td><strong>P4</strong></td>
+              <td><strong>B2B / B2G 机构文印与政务亭集成</strong></td>
+              <td><span class="badge b-tbd">渠道合作切入</span></td>
+              <td>向越南本地办公租赁商或政府数字公民服务站集成商输出云端管控软件与定制硬件，按设备销售与技术年费结算，规避外资末端零售点位运营风险。</td>
+            </tr>
+            <tr>
+              <td><strong>排除</strong></td>
+              <td><strong>传统临街管屋街区 &amp; 露天独立柜</strong></td>
+              <td><span class="badge b-risk">明确不做 (No-Go)</span></td>
+              <td>正面撞上 350–500 盾/页的夫妻复印店地板价，且露天摆放面临高温高湿卡纸、台风暴雨损耗及市政城管清理人行道（<code>Vỉa hè</code>）执法风险。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 05 Regulations & Engineering -->
+    <section id="s5">
+      <h2><span class="sec-num">05</span>法规准入、个人数据合规与工程本地化硬门槛</h2>
+      <p class="sec-lead">切勿将商业打印终端简单等同于普通饮料售货机——印刷监管、数据本地化与防潮防乱码是规模化前的三道必答题。</p>
+
+      <h3>5.1 越南印刷复印监管与外资准入红线</h3>
+      <div class="callout c-risk">
+        <div class="callout-title">规模化铺点前必须由越南当地执业律所书面确认的三项法规约束</div>
+        <ul style="margin-bottom:0">
+          <li><strong>外资市场准入限制（<code>Decree 96/2026/NĐ-CP</code> &amp; WTO <code>CPC 88442</code>）</strong>：2026 年 3 月出台的投资法实施细则附录一将“印刷服务经营”列为<strong>外资有条件市场准入行业</strong>（WTO 服务贸易承诺表中印刷复印相关服务亦属未开放承诺领域）；此外 <code>Decree 342/2026/NĐ-CP</code> 规定自 2026-10-18 起外资企业从事普通设备租赁亦需申领专门营业许可。100% 外资主体直接申请经营末端自助复印网点审批难度大，通常需采用<strong>“技术/硬件输出 + 越南本土持牌主体落地运营”</strong>的合规合作架构。</li>
+          <li><strong>复印服务点开业前申报与内容责任（<code>Decree 60/2014/NĐ-CP</code> 及 <code>Decree 116/2026/NĐ-CP</code>）</strong>：法规将商业复印纳入管理，第 25 条要求复印服务机构开业前至少 <strong>10 日</strong>向基层人民委员会申报；第 26 条要求经营者履行“发现待印文件含违规内容及时报告主管机关”的法律义务。无人值守柜机是否须“逐台逐址申报”以及如何通过电子日志履行审查义务，须在首点上线前取得属地主管部门口径。</li>
+          <li><strong>彩色打印/复印设备专项登记</strong>：在越南进口及商业使用具备彩色复印/打印功能的设备，须依规向省级主管部门办理<strong>设备使用前申报登记</strong>，未经登记擅自用于商业收费存在设备罚没与行政处罚风险。</li>
+        </ul>
+      </div>
+
+      <h3>5.2 个人数据保护法（<code>Law 91/2025/QH15</code>）架构要求</h3>
+      <p>
+        越南《个人数据保护法》及配套实施令 <code>Decree 356/2025/NĐ-CP</code> 已于 <strong>2026 年 1 月 1 日正式生效</strong>。由于用户上传打印的文件常包含身份证件、简历、合同及人脸证件照（属法定<strong>敏感个人数据</strong>），违规超范围处理或违法跨境传输最高可处上一年营收 <strong>5%</strong> 罚款：
+      </p>
+      <ul>
+        <li><strong>数据不出境与印后即焚</strong>：严禁沿用“越南前端扫码、文件直传境外服务器渲染”的偷懒架构；首发即应部署于<strong>越南境内云服务器</strong>，设定“到机输码出纸、打印完成立即销毁源文件与终端缓存、逾期未取自动清除”，且绝不将用户待印文档用于任何二次商业画像。</li>
+      </ul>
+
+      <h3>5.3 硬件防潮与软件渲染的四大工程生死线</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:22%">工程环节</th>
+              <th style="width:38%">越南实地痛点</th>
+              <th>低成本高可靠解决方案</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>气候防潮与防卡纸</strong></td>
+              <td>胡志明雨季漫长高温高湿，河内每年 2–4 月“回南天（<code>Nồm ẩm</code>）”室内湿度高达 <strong>90%–98%</strong>，普通 70g 纸极易吸潮软化卡纸；单笔仅收一两元，人工上门排障一次即亏光整周毛利。</td>
+              <td>① 100% 部署于室内空调/遮蔽环境；② 纸仓内置 <strong>PTC 恒温防潮除湿模块</strong>；③ 强制统一使用 <strong>80gsm–85gsm 高挺度防潮纸</strong>，优先选用皮实耐用的商用激光或经充分验证的商用连供机芯。</td>
+            </tr>
+            <tr>
+              <td><strong>越南语声调防乱码</strong></td>
+              <td>越南语含大量多重声调符号（如 <code>Nguyễn</code>），且当地政企历史文档并存 Unicode、<code>TCVN3</code>、<code>VNI</code> 等多种编码，Linux 云端转换 Word/Excel 极易印出方块乱码引发客诉退款。</td>
+              <td>完整预装越南本土全套标准与历史编码字库，手机端强制展示<strong>“先预览转曲后的 PDF 效果图、确认无误再扫码付款”</strong>。</td>
+            </tr>
+            <tr>
+              <td><strong>上传与支付退款闭环</strong></td>
+              <td>Zalo 聊天文件外调步骤繁琐；小额扫码若遇卡纸缺纸无法秒级退费，会迅速破坏场地口碑。</td>
+              <td>打通 <strong>越南语轻量 H5 + Zalo OA 公众号一键转发文件自动回传取件码</strong>；接入支持小额回调与<strong>出纸失败自动原路退款</strong>的持牌聚合收单通道，并对接越南电子发票（<code>hóa đơn điện tử</code>）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 06 Stage-Gate Roadmap & Checklist -->
+    <section id="s6">
+      <h2><span class="sec-num">06</span>客观落地建议：三阶段验证路径与实地核查清单</h2>
+      <p class="sec-lead">用最小信息采购成本替代盲目重资产投入，每一阶段均设立清晰的量化过线闸门（Go / No-Go）。</p>
+
+      <h3>6.1 推荐进入模式对比排序</h3>
+      <ol>
+        <li><strong>首选路径（轻资产技术与供应链赋能 / B2B2C 联营）</strong>：与越南本地已具备场地资源、巡检团队及合规资质的伙伴（如连锁便利店服务商、校园后勤承包商或本地文印商）合作，中方聚焦成熟的云打印控制主板、SaaS 计费分账系统与高性价比室内整机供应链输出，由本地主体负责点位申报、日常补纸与税务开票。</li>
+        <li><strong>次选路径（单城 6–10 点极简 MVP 实测，预算严控 8 万–15 万元 RMB）</strong>：若拟参与点位运营，务必先在一座城市（首选胡志明市东部：守德大学城 + Vinhomes Grand Park + 沿线 24h 便利店，集中于同一条摩托补货路线）选用本地可维保的现成室内设备试跑 90 天，<strong>在单机模型未跑通前，不启动定制硬件开模、不跨城分散铺点、不签长期保底租约</strong>。</li>
+      </ol>
+
+      <h3>6.2 实地考察五项必查清单（支持点击勾选记录）</h3>
+      <p style="font-size:13px;color:var(--muted);">在采购任何试点机器前，建议用 1–2 天现场走完以下五项实测（勾选状态自动保存在本地浏览器）：</p>
+
+      <div class="check-list" id="checklist">
+        <label class="check-item">
+          <input type="checkbox" data-key="chk1" onchange="toggleCheck(this)">
+          <div>
+            <div class="ci-title">1. 实测本土竞品（InsPrint / RoPrint）真机日单量与完好率</div>
+            <div class="ci-desc">现场走访胡志明市/河内 3–5 台公开在营点位，间隔数小时各下一单带声调越文文档，观察订单流水号/计数器差值、纸盒余量及出纸耗时。<strong>过线参考：半数以上在营设备自然日均 ≥ 15 单且出纸顺畅。</strong></div>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk2" onchange="toggleCheck(this)">
+          <div>
+            <div class="ci-title">2. 候选点步行 5 分钟圈夜间（21:00 后）与周日替代店实测</div>
+            <div class="ci-desc">在目标公寓大堂、大学宿舍与便利店周边步行 5 分钟范围内，分别于普通工作日晚间与周日携带 1 页、5 页、10 页文件向街边复印店询价试印，记录真实成交价与关门时间。<strong>过线参考：21:00 后确无营业街店，且目标客群接受每单 5,000–6,500 盾便利定价。</strong></div>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk3" onchange="toggleCheck(this)">
+          <div>
+            <div class="ci-title">3. 访谈 20 位本地目标用户（公寓家长与大学生）还原真实打印构成</div>
+            <div class="ci-desc">现场询问最近一个月校外打印的频次、具体内容（初高中讲义、大学课件、合同表单或照片）、单次页数及遇到街店关门的处理方式，验证小学减负与 VNeID 落地后的真实需求厚度。</div>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk4" onchange="toggleCheck(this)">
+          <div>
+            <div class="ci-title">4. 摸底便利店总部（GS25 / Circle K）与大盘物业进场条款</div>
+            <div class="ci-desc">核实室内 0.5–0.6㎡ 机位的供电联网条件、审批链条（是否需业委会同意）及收费模式。<strong>过线参考：接受纯流水分成（15%–25%）或极低保底电费，无高额固定月租（不超过 50 万盾/月）。</strong></div>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk5" onchange="toggleCheck(this)">
+          <div>
+            <div class="ci-title">5. 确认本地合规运营伙伴、收单原路退款及律所书面口径</div>
+            <div class="ci-desc">对接至少 2 家本地设备/运维服务商比选 24 个月整机含维保总成本；向当地律师确认复印点基层申报与彩印机登记流程；实测收单通道 5,000 盾小单秒级回调与失败自动原路退款。</div>
+          </div>
+        </label>
+      </div>
+
+      <h3>6.3 90 天微试点扩规模硬闸门（6 点扩至 20–30 点的先决条件）</h3>
+      <div class="callout c-good">
+        <div class="callout-title">全部满足以下四项硬指标方可追加投资扩点，否则及时止损或转做纯软件/B端输出：</div>
+        <ol style="margin-bottom:0">
+          <li><strong>单点现金流达标率</strong>：6 个试点中至少 <strong>4 个点位</strong>在连续两个正常月份（按实收扣退款、实付耗材场租巡检后）静态设备回收期 <strong>≤ 24 个月</strong>（且校园点经寒暑假折算后仍 ≤ 30 个月）；</li>
+          <li><strong>设备工程可靠性</strong>：已付款订单<strong>成功出纸率 ≥ 98%</strong>，受潮卡纸人工上门排障率 <strong>&lt; 0.5%</strong>（每 200 单少于 1 次现场修机）；</li>
+          <li><strong>合规手续闭环</strong>：试点点位 100% 完成当地要求的经营备案/设备申报，越南境内数据处理与电子发票流转顺畅无客诉纠纷；</li>
+          <li><strong>项目治理前提清晰</strong>：跨国合作各方在扩大投入前，已完成品牌商标、软硬件知识产权许可边界的正式书面确权，并建立操盘团队与出资方风险共担、按里程碑分期出资的透明治理机制。</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 07 Three-Layer Evidence & References -->
+    <section id="s7">
+      <h2><span class="sec-num">07</span>三层证据边界核查与公开参考来源</h2>
+      <p class="sec-lead">严格区分客观统计事实、模型推演假设与尚未实地核验的盲区，保持科学克制的商业判断。</p>
+
+      <div class="layer-grid">
+        <div class="layer-card" style="background:var(--green-soft);border-color:#cbe6d8;">
+          <h4 style="color:var(--green);">① 已观测客观事实</h4>
+          <ul>
+            <li>越南人口、38.8% 城镇化率、约 4,400 个公寓项目、9,671 家现代便利店及在校生统计数据；</li>
+            <li>SBV 披露的扫码支付增速与 <code>VietQR</code> 清算基础设施；</li>
+            <li>越南 <code>Decree 60/2014</code>、<code>96/2026</code>、<code>116/2026</code>、<code>320/2026</code>（VNeID 免交复印件）、<code>342/2026</code> 及 <code>Law 91/2025</code>（个人数据保护法）现行条文；</li>
+            <li>本土 <code>InsPrint</code> 公示计费公式、<code>RoPrint</code> 招商页、UEH 每年 500 面免费印量、东盛乡 24/7 政务站及韩国 CU 店均约 13 单/日公开报道。</li>
+          </ul>
+        </div>
+        <div class="layer-card" style="background:var(--purple-soft);border-color:#dfd3f5;">
+          <h4 style="color:var(--purple);">② 模型测算与待验证假设</h4>
+          <ul>
+            <li>基准模型中“每单 6,500 盾、边际贡献 3,500 盾、月固定开支 150 万盾、室内整机落地 3,000 万盾”系基于本地纸价与设备零售价构建的投资门槛推演；</li>
+            <li>“15 单/日保日常现金、27 单/日两年回本”及“全越南有效可盈利点位上限 3,100–5,600 台、5 年现实 SOM 1,000–4,000 台”属自下而上情景估算，非已审计实绩。</li>
+          </ul>
+        </div>
+        <div class="layer-card" style="background:var(--amber-soft);border-color:#f0dfb4;">
+          <h4 style="color:var(--amber);">③ 未知变量与待排查盲区</h4>
+          <ul>
+            <li><code>InsPrint</code> 与 <code>RoPrint</code> 在越南全国的实际活跃台数、真实单机日均订单中位数与撤机率尚未公开；</li>
+            <li>两级地方政府改革后，各坊/郡与省级信息传媒厅对“室内无人自助打印柜（含彩印）”的实际审批尺度与耗时；</li>
+            <li><code>Vinhomes</code> 等大盘物业与业委会的实际入场条件、<code>GS25 / Circle K</code> 总部真实分成底线，以及越南用户在夜间场景对 1,000–2,000 盾/页溢价的真实转化率。</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>主要公开法规与市场参考来源</h3>
+      <div class="src-cols">
+        <div>1. 越南国家统计局 (NSO)《2025 年第四季度及全年经济社会统计公报》— <a href="https://www.nso.gov.vn/en/data-and-statistics/2026/01/press-release-social-economic-situation-in-the-fourth-quarter-and-2025/" target="_blank" rel="noopener">nso.gov.vn</a></div>
+        <div>2. 越南政府《第 96/2026/NĐ-CP 号法令》（外资有条件市场准入行业清单）— <a href="https://vanban.chinhphu.vn/?docid=217407&pageid=27160" target="_blank" rel="noopener">vanban.chinhphu.vn</a></div>
+        <div>3. 越南政府《第 60/2014/NĐ-CP 号法令》及《第 116/2026/NĐ-CP 号法令》（印刷与复印服务管理）— <a href="https://vanban.chinhphu.vn/?docid=218181&pageid=27160" target="_blank" rel="noopener">vanban.chinhphu.vn</a></div>
+        <div>4. 越南《个人数据保护法》(Law 91/2025/QH15) 及实施细则《第 356/2025/NĐ-CP 号法令》— <a href="https://vanban.chinhphu.vn/?docid=214590&pageid=27160" target="_blank" rel="noopener">vanban.chinhphu.vn</a></div>
+        <div>5. KPMG 解读《第 320/2026/NĐ-CP 号法令：VNeID 已集成证件免提交原件或复印件》— <a href="https://kpmg.com/vn/en/insights/2026/09/decree-320-on-electronic-identification-and-authentication.html" target="_blank" rel="noopener">kpmg.com/vn</a></div>
+        <div>6. 越南劳动报 / 西贡解放日报：胡志明市东盛乡 24/7 政务自助站与 168 个数字公民站规划 — <a href="https://en.sggp.org.vn/smart-public-kiosks-transform-urban-access-post129565.html" target="_blank" rel="noopener">en.sggp.org.vn</a></div>
+        <div>7. 越南 NAPAS 官方商户二维码支付与清算说明 — <a href="https://napas.com.vn/dich-vu-thanh-toan-bang-ma-qr" target="_blank" rel="noopener">napas.com.vn</a></div>
+        <div>8. 越南本土竞品 InsPrint 公开计费标准与点位地图 — <a href="https://www.insprint.vn/pricing" target="_blank" rel="noopener">insprint.vn/pricing</a></div>
+        <div>9. 越南本土竞品 RoPrint (NaviX) 渠道与场地合作方案 — <a href="https://roprint.vn/roprint-dai-ly/" target="_blank" rel="noopener">roprint.vn</a></div>
+        <div>10. 胡志明市街头文印店参考挂牌价（TrueLight / In Nhanh HCM）— <a href="https://www.truelight.com.vn/san-pham/dich-vu-in-tai-lieu" target="_blank" rel="noopener">truelight.com.vn</a></div>
+        <div>11. 胡志明市经济大学 (UEH) 智能打印服务与学生免费额度公示 — <a href="https://hotro.ueh.edu.vn/bai-viet/dich-vu-thong-minh-1577" target="_blank" rel="noopener">hotro.ueh.edu.vn</a></div>
+        <div>12. 越南公立小学两班制不留家庭作业及《第 29/2024 号通知》补习管理规定 — <a href="https://www.vietnam.vn/en/kiem-tra-cuoi-nam-o-cap-tieu-hoc-uu-tien-dong-vien-thay-vi-gay-ap-luc" target="_blank" rel="noopener">vietnam.vn</a></div>
+        <div>13. 韩国 CU 便利店 Printing Box 运营数据与门店规模报道 — <a href="https://www.asiae.co.kr/en/article/2023010508102646321" target="_blank" rel="noopener">asiae.co.kr</a> · <a href="https://en.edaily.co.kr/news/eda202607265185/" target="_blank" rel="noopener">edaily.co.kr</a></div>
+        <div>14. 越南 GS25 与 Circle K 连锁便利店扩张数据（MoneyToday 2026-11）— <a href="https://www.mt.co.kr/index.php/en/living/2026/11/10/2026110919461495414" target="_blank" rel="noopener">mt.co.kr</a></div>
+      </div>
+    </section>
+
+    <footer>
+      越南印刷与 24 小时自助文印市场商业可行性评估报告 · 编制时间：2026 年 11 月<br>
+      免责声明：本报告基于公开政策法规、统计公报与商业模型推演编制，仅供商业研讨与实地尽调参考，不构成正式法律意见或投资承诺。
+    </footer>
+  </main>
+</div>
+
+<script>
+  const FX = 3800; // 1 RMB = 3,800 VND
+
+  function fmtNum(n, dec = 0) {
+    return Number(n).toLocaleString('zh-CN', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  }
+
+  function updateSim() {
+    const orders = parseInt(document.getElementById('r-orders').value, 10);
+    const arpu = parseInt(document.getElementById('r-arpu').value, 10);
+    const sharePct = parseInt(document.getElementById('r-share').value, 10);
+    const fixedRentWan = parseInt(document.getElementById('r-rent').value, 10);
+    const capexMillion = parseFloat(document.getElementById('r-capex').value);
+
+    const capexWan = Math.round(capexMillion * 100);
+
+    document.getElementById('v-orders').textContent = orders + ' 单/日';
+    document.getElementById('v-arpu').textContent = fmtNum(arpu) + ' 盾 (≈' + (arpu / FX).toFixed(2) + '元)';
+    document.getElementById('v-share').textContent = sharePct + '%';
+    document.getElementById('v-rent').textContent = fmtNum(fixedRentWan) + ' 万盾/月' + (fixedRentWan > 0 ? ' (≈' + Math.round(fixedRentWan * 10000 / FX) + '元)' : '');
+    document.getElementById('v-capex').textContent = fmtNum(capexWan) + ' 万盾 (≈' + fmtNum(Math.round(capexWan * 10000 / FX)) + '元)';
+
+    // 标准 5 面订单（4 黑白 + 1 彩色）纸墨成本 1,800 盾 + 异常损耗 160 盾
+    const paperInk = 1800;
+    const loss = 160;
+    const payFeeRate = 0.01;
+    const unitContrib = arpu * (1 - sharePct / 100 - payFeeRate) - paperInk - loss;
+
+    const monthlyGmvWan = (orders * 30 * arpu) / 10000;
+    const baseFixedWan = 150; // 电网35 + 巡检75 + 备件40
+    const totalFixedWan = baseFixedWan + fixedRentWan;
+    const monthlyCashWan = (orders * 30 * unitContrib) / 10000 - totalFixedWan;
+
+    // Required daily orders for 24-month payback
+    const reqMonthlyContribWan = totalFixedWan + capexWan / 24;
+    let reqOrdersText = '无法达成';
+    if (unitContrib > 0) {
+      const reqOrders = Math.ceil((reqMonthlyContribWan * 10000) / (30 * unitContrib));
+      reqOrdersText = reqOrders + ' 单/日';
+    }
+
+    document.getElementById('out-gmv').textContent = fmtNum(monthlyGmvWan, 1) + ' 万盾 (≈' + fmtNum(Math.round(monthlyGmvWan * 10000 / FX)) + '元)';
+    document.getElementById('out-unit').textContent = fmtNum(Math.round(unitContrib)) + ' 盾/单';
+    document.getElementById('out-fixed').textContent = fmtNum(totalFixedWan, 1) + ' 万盾/月';
+
+    const cashSign = monthlyCashWan >= 0 ? '+' : '';
+    const cashRmb = Math.round(monthlyCashWan * 10000 / FX);
+    document.getElementById('out-cash').textContent = cashSign + fmtNum(monthlyCashWan, 1) + ' 万盾 (≈' + (cashRmb >= 0 ? '+' : '') + fmtNum(cashRmb) + '元)';
+    document.getElementById('out-req').textContent = reqOrdersText;
+
+    const box = document.getElementById('out-box');
+    const pbEl = document.getElementById('out-payback');
+    const vdEl = document.getElementById('out-verdict');
+
+    if (monthlyCashWan <= 0) {
+      pbEl.textContent = '经营现金流为负';
+      vdEl.textContent = '单点入不敷出，无法收回硬件投资（需提单量、降固定租或换点）';
+      box.style.background = 'var(--red-soft)';
+      box.style.color = 'var(--red)';
+    } else {
+      const months = capexWan / monthlyCashWan;
+      pbEl.textContent = months.toFixed(1) + ' 个月';
+      if (months <= 24) {
+        vdEl.textContent = '满足 ≤24 个月静态回收门槛（仍需考虑寒暑假波动与设备折旧）';
+        box.style.background = 'var(--green-soft)';
+        box.style.color = 'var(--green)';
+      } else if (months <= 36) {
+        vdEl.textContent = '回收期偏长（24–36 个月），抗风险缓冲较薄，建议叠加广告/证件照或压降机价';
+        box.style.background = 'var(--amber-soft)';
+        box.style.color = 'var(--amber)';
+      } else {
+        vdEl.textContent = '回收期超过 3 年（接近设备经济寿命），商业上不划算';
+        box.style.background = 'var(--red-soft)';
+        box.style.color = 'var(--red)';
+      }
+    }
+  }
+
+  function applyPreset(btn, orders, arpu, share, rent, capex) {
+    document.getElementById('r-orders').value = orders;
+    document.getElementById('r-arpu').value = arpu;
+    document.getElementById('r-share').value = share;
+    document.getElementById('r-rent').value = rent;
+    document.getElementById('r-capex').value = capex;
+    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    updateSim();
+  }
+
+  function toggleCheck(el) {
+    const label = el.closest('.check-item');
+    if (el.checked) label.classList.add('done');
+    else label.classList.remove('done');
+    try {
+      localStorage.setItem('vn_print_' + el.dataset.key, el.checked ? '1' : '0');
+    } catch (e) {}
+  }
+
+  (function init() {
+    updateSim();
+    try {
+      document.querySelectorAll('#checklist input[type="checkbox"]').forEach(chk => {
+        if (localStorage.getItem('vn_print_' + chk.dataset.key) === '1') {
+          chk.checked = true;
+          chk.closest('.check-item').classList.add('done');
+        }
+      });
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
